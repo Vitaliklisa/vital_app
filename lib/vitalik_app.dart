@@ -7,7 +7,7 @@ class VitalikApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'My first beta',
+      title: 'Vital site',
       theme: ThemeData(primarySwatch: AppColors.primarySwatch),
       home: Ok(),
     );
