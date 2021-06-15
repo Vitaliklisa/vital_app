@@ -29,6 +29,10 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
+  # to add  ChangeNotifierProvider and Consumer and
+  # for implementing  MVP structural design pattern
+  provider: ^5.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
