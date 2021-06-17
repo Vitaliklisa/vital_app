@@ -20,7 +20,7 @@ class _ScreenState extends State<Screen> implements ScreenView {
           return Scaffold(
             appBar: AppBar(
               backgroundColor: model.backgroundColor,
-              title: Text("My notebook",
+              title: Text("My site",
                 style: TextStyle(fontSize: 45.0, color: model.textColor,),),
               centerTitle: true,
               actions: [
