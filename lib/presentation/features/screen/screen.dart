@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:vital_app/presentation/features/screen/screen_model.dart';
 import 'package:vital_app/presentation/features/screen/screen_view.dart';
@@ -10,6 +11,13 @@ class Screen extends StatefulWidget {
 }
 
 class _ScreenState extends State<Screen> implements ScreenView {
+  @override
+  void displayMessage(String message) {
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(message),
+    ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -45,6 +53,23 @@ class _ScreenState extends State<Screen> implements ScreenView {
                   alignment: Alignment.center,
                   child: Column(
                     children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          FloatingActionButton(
+                            backgroundColor: Colors.transparent,
+                            onPressed: model.onGitHubPressed,
+                            child: SvgPicture.asset('assets/images/github.svg'),
+                          ),
+                          FloatingActionButton(
+                            backgroundColor: Colors.transparent,
+                            onPressed: model.onLinkedinPressed,
+                            child: SvgPicture.asset(
+                                'assets/images/linkedin.svg',
+                                color: Colors.blue),
+                          )
+                        ],
+                      ),
                       Row(
                         children: [
                           Image.asset(
