@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
@@ -18,10 +17,11 @@ class _ScreenState extends State<Screen> implements ScreenView {
       child: Consumer<ScreenModel>(
         builder: (context, model, child) {
           return Scaffold(
+            backgroundColor: model.backgroundColor,
             appBar: AppBar(
               backgroundColor: model.backgroundColor,
               title: Text(
-                "My site",
+                "About me",
                 style: TextStyle(
                   fontSize: 45.0,
                   color: model.textColor,
@@ -43,16 +43,21 @@ class _ScreenState extends State<Screen> implements ScreenView {
               child: SingleChildScrollView(
                 child: Container(
                   alignment: Alignment.center,
-                  color: model.backgroundColor,
                   child: Column(
                     children: [
-                      Text(
-                        'I hate cold',
-                        style:
-                        TextStyle(fontSize: 45.0, color: model.textColor),
+                      Row(
+                        children: [
+                          Image.asset(
+                            'assets/images/myself.jpg',
+                            height: 150,
+                          ),
+                          Text(
+                            'I hate cold',
+                            style: TextStyle(
+                                fontSize: 45.0, color: model.textColor),
+                          ),
+                        ],
                       ),
-                      Image.asset('assets/images/seller.jpg'),
-                      Image.asset('assets/images/anon.jpg'),
                     ],
                   ),
                 ),
