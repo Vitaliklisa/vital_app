@@ -1,0 +1,33 @@
+include: package:lint/analysis_options.yaml
+
+linter:
+  rules:
+    # ------ Disabling individual rules ----- #
+
+    # Allow Util classes to have only static members.
+    avoid_classes_with_only_static_members: false
+
+    avoid_returning_null_for_void: false
+
+    type_annotate_public_apis: false
+
+    unnecessary_raw_strings: false
+
+    prefer_const_constructors_in_immutables: false
+
+    # Remove blindly following the Flutter code style, which prefers types everywhere.
+    always_specify_types: false
+
+    # allow identify initial link on page start
+    avoid_web_libraries_in_flutter: false
+
+    # ------------------------------------- #
+
+    # ------ Enabling individual rules ------ #
+    #                 ---                   #
+    # These rules here are good but too     #
+    # opinionated to enable them by default #
+    # ------------------------------------- #
+
+    # Makes constructors the first thing in every class
+    sort_constructors_first: true

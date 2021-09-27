@@ -38,7 +38,6 @@ class ScreenModel with ChangeNotifier {
     }
   }
 
-
   void _changeButtonColor() {
     if (_buttonColor == _white) {
       _buttonColor = _black;
@@ -56,15 +55,20 @@ class ScreenModel with ChangeNotifier {
   }
 
   Future<void> onGitHubPressed() async {
-    await canLaunch('https://github.com/Vitaliklisa') ? await launch(
-        'https://github.com/Vitaliklisa'
-            ) :_screenView.displayMessage('cannot open github');
+    await canLaunch('https://github.com/Vitaliklisa')
+        ? await launch('https://github.com/Vitaliklisa')
+        : _screenView.displayMessage('cannot open github');
   }
 
   Future<void> onLinkedinPressed() async {
     await canLaunch('https://www.linkedin.com/in/vitaliikhomenko/')
         ? await launch('https://www.linkedin.com/in/vitaliikhomenko/')
-        :_screenView.displayMessage('cannot open linkedin');
+        : _screenView.displayMessage('cannot open linkedin');
+  }
+
+  Future<void> onFacebookPressed() async {
+    await canLaunch('')
+        ? await launch('')
+        : _screenView.displayMessage('cannot open facebook');
   }
 }
-
