@@ -15,7 +15,7 @@ class _ScreenState extends State<Screen> implements ScreenView {
   void displayMessage(String message) {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: Text(message),
-    ));
+    ),);
   }
 
   @override
@@ -44,9 +44,9 @@ class _ScreenState extends State<Screen> implements ScreenView {
               ],
             ),
             body: RawScrollbar(
-              thumbColor: Color(0xFF150A28),
+              thumbColor: const Color(0xFF150A28),
               isAlwaysShown: true,
-              radius: Radius.circular(20),
+              radius: const Radius.circular(20),
               thickness: 5,
               child: SingleChildScrollView(
                 child: Container(
@@ -66,12 +66,8 @@ class _ScreenState extends State<Screen> implements ScreenView {
                             onPressed: model.onLinkedinPressed,
                             child: SvgPicture.asset(
                                 'assets/images/linkedin.svg',
-                                color: Colors.blue),
+                                color: Colors.blue,),
                           ),
-                          FloatingActionButton(
-                              backgroundColor: Colors.transparent,
-                              onPressed: model.onGitHubPressed,
-                              child: SvgPicture.asset('assets/images/svg.'))
                         ],
                       ),
                       Row(
@@ -83,7 +79,7 @@ class _ScreenState extends State<Screen> implements ScreenView {
                           Text(
                             'I hate cold',
                             style: TextStyle(
-                                fontSize: 45.0, color: model.textColor),
+                                fontSize: 45.0, color: model.textColor,),
                           ),
                         ],
                       ),

@@ -1,7 +1,8 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:vital_app/presentation/values/app_colors.dart';
 import 'package:vital_app/presentation/features/screen/screen.dart';
+import 'package:vital_app/presentation/values/app_colors.dart';
 
 class VitalikApp extends StatelessWidget {
   @override

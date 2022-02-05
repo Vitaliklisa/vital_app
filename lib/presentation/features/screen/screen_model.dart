@@ -7,7 +7,6 @@ class ScreenModel with ChangeNotifier {
   Color _white = Color(0xFFFFFFFF);
 
   late Color _backgroundColor = _black;
-
   Color get backgroundColor => _backgroundColor;
 
   late Color _textColor = _white;
