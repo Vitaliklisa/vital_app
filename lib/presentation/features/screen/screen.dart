@@ -67,6 +67,10 @@ class _ScreenState extends State<Screen> implements ScreenView {
                             child: SvgPicture.asset(
                                 'assets/images/linkedin.svg',
                                 color: Colors.blue,),
+                          ), FloatingActionButton(
+                            backgroundColor: Colors.transparent,
+                            onPressed: model.onFacebookPressed,
+                            child: SvgPicture.asset('assets/images/facebook.svg'),
                           ),
                         ],
                       ),

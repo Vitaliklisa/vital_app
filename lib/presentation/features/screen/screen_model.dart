@@ -66,8 +66,8 @@ class ScreenModel with ChangeNotifier {
   }
 
   Future<void> onFacebookPressed() async {
-    await canLaunch('')
-        ? await launch('')
+    await canLaunch('https://www.facebook.com/VitalKhomenko')
+        ? await launch('https://www.facebook.com/VitalKhomenko')
         : _screenView.displayMessage('cannot open facebook');
   }
 }
